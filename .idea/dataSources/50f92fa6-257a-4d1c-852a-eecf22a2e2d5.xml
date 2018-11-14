@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - sampledb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="sampledb">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="mysql"/>
+    <schema id="4" name="performance_schema"/>
+    <schema id="5" name="test"/>
+    <schema id="6" name="es"/>
+    <table id="7" parent="1" name="t_order"/>
+    <table id="8" parent="1" name="user"/>
+    <column id="9" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="10" parent="7" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="11" parent="7" name="order_number">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="12" parent="7" name="uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="13" parent="7" name="pay_price">
+      <data-type>double(20,2)|0</data-type>
+    </column>
+    <column id="14" parent="7" name="is_pay">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="15" parent="7" name="pay_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="16" parent="7" name="is_ship">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="17" parent="7" name="ship_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="18" parent="7" name="is_receipt">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="19" parent="7" name="receipt_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="20" parent="7" name="ship_nmber">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="21" parent="7" name="status">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="22" parent="7" name="create_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="23" parent="7" name="update_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="24" parent="7" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="25" parent="8" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="26" parent="8" name="user_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="27" parent="8" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="28" parent="8" name="phone">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="29" parent="8" name="order_number">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="30" parent="8" name="PRIMARY">
+      <columns>user_id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

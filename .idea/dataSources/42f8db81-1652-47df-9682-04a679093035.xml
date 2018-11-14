@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - es@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="es">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="mysql"/>
+    <schema id="4" name="performance_schema"/>
+    <schema id="5" name="sampledb"/>
+    <schema id="6" name="test"/>
+    <table id="7" parent="1" name="maintain_icon"/>
+    <table id="8" parent="1" name="maintain_map"/>
+    <table id="9" parent="1" name="maintain_notification_data"/>
+    <table id="10" parent="1" name="maintain_notification_template"/>
+    <table id="11" parent="1" name="maintain_task_definition"/>
+    <table id="12" parent="1" name="personal_calendar"/>
+    <table id="13" parent="1" name="personal_message"/>
+    <table id="14" parent="1" name="personal_message_content"/>
+    <table id="15" parent="1" name="showcase_category"/>
+    <table id="16" parent="1" name="showcase_child"/>
+    <table id="17" parent="1" name="showcase_editor"/>
+    <table id="18" parent="1" name="showcase_excel_data"/>
+    <table id="19" parent="1" name="showcase_moveable"/>
+    <table id="20" parent="1" name="showcase_parent"/>
+    <table id="21" parent="1" name="showcase_product"/>
+    <table id="22" parent="1" name="showcase_sample"/>
+    <table id="23" parent="1" name="showcase_status_audit"/>
+    <table id="24" parent="1" name="showcase_status_show"/>
+    <table id="25" parent="1" name="showcase_tree"/>
+    <table id="26" parent="1" name="showcase_upload"/>
+    <table id="27" parent="1" name="sys_auth"/>
+    <table id="28" parent="1" name="sys_group"/>
+    <table id="29" parent="1" name="sys_group_relation"/>
+    <table id="30" parent="1" name="sys_job"/>
+    <table id="31" parent="1" name="sys_organization"/>
+    <table id="32" parent="1" name="sys_permission"/>
+    <table id="33" parent="1" name="sys_resource"/>
+    <table id="34" parent="1" name="sys_role"/>
+    <table id="35" parent="1" name="sys_role_resource_permission"/>
+    <table id="36" parent="1" name="sys_user"/>
+    <table id="37" parent="1" name="sys_user_last_online"/>
+    <table id="38" parent="1" name="sys_user_online"/>
+    <table id="39" parent="1" name="sys_user_organization_job"/>
+    <table id="40" parent="1" name="sys_user_status_history"/>
+    <column id="41" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="42" parent="7" name="identity">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="43" parent="7" name="css_class">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="44" parent="7" name="img_src">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="45" parent="7" name="width">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="46" parent="7" name="height">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="47" parent="7" name="sprite_src">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="48" parent="7" name="left">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="49" parent="7" name="top">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="50" parent="7" name="style">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="51" parent="7" name="type">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="52" parent="7" name="description">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <index id="53" parent="7" name="unique_maintain_icon_identity">
+      <columns>identity</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="54" parent="7" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="55" parent="7" name="unique_maintain_icon_identity">
+      <columns>identity</columns>
+      <underlying-index>unique_maintain_icon_identity</underlying-index>
+    </key>
+    <column id="56" parent="8" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="57" parent="8" name="map_key">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="58" parent="8" name="map_value">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <index id="59" parent="8" name="unique_maintain_map_key">
+      <columns>map_key</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="60" parent="8" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="61" parent="8" name="unique_maintain_map_key">
+      <columns>map_key</columns>
+      <underlying-index>unique_maintain_map_key</underlying-index>
+    </key>
+    <column id="62" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="63" parent="9" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="64" parent="9" name="system">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="65" parent="9" name="title">
+      <data-type>varchar(600)|0</data-type>
+    </column>
+    <column id="66" parent="9" name="content">
+      <data-type>varchar(2000)|0</data-type>
+    </column>
+    <column id="67" parent="9" name="date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="68" parent="9" name="is_read">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="69" parent="9" name="idx_maintain_notification_data_user_id_read">
+      <columns>user_id
+is_read</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="70" parent="9" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="71" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="72" parent="10" name="name">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="73" parent="10" name="system">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="74" parent="10" name="title">
+      <data-type>varchar(600)|0</data-type>
+    </column>
+    <column id="75" parent="10" name="template">
+      <data-type>varchar(2000)|0</data-type>
+    </column>
+    <column id="76" parent="10" name="deleted">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="77" parent="10" name="unique_maintain_notification_template_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="78" parent="10" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="79" parent="10" name="unique_maintain_notification_template_name">
+      <columns>name</columns>
+      <underlying-index>unique_maintain_notification_template_name</underlying-index>
+    </key>
+    <column id="80" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="81" parent="11" name="name">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="82" parent="11" name="cron">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="83" parent="11" name="bean_class">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="84" parent="11" name="bean_name">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="85" parent="11" name="method_name">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="86" parent="11" name="is_start">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="87" parent="11" name="description">
+      <data-type>varchar(2000)|0</data-type>
+    </column>
+    <key id="88" parent="11" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="89" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="90" parent="12" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="91" parent="12" name="title">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="92" parent="12" name="details">
+      <data-type>varchar(1000)|0</data-type>
+    </column>
+    <column id="93" parent="12" name="start_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="94" parent="12" name="length">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="95" parent="12" name="start_time">
+      <data-type>time|0</data-type>
+    </column>
+    <column id="96" parent="12" name="end_time">
+      <data-type>time|0</data-type>
+    </column>
+    <column id="97" parent="12" name="background_color">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="98" parent="12" name="text_color">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <index id="99" parent="12" name="office_calendar_user_id_start_date">
+      <columns>user_id
+start_date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="100" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="101" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="102" parent="13" name="sender_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="103" parent="13" name="receiver_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="104" parent="13" name="send_date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="105" parent="13" name="title">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="106" parent="13" name="sender_state">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="107" parent="13" name="sender_state_change_date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="108" parent="13" name="receiver_state">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="109" parent="13" name="receiver_state_change_date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="110" parent="13" name="type">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="111" parent="13" name="is_read">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="112" parent="13" name="is_replied">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="113" parent="13" name="parent_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="114" parent="13" name="parent_ids">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <index id="115" parent="13" name="idx_personal_message_receiver_id_receiver_state">
+      <columns>receiver_id
+receiver_state
+is_read</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="116" parent="13" name="idx_personal_message_sender_id_sender_state">
+      <columns>sender_id
+sender_state</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="117" parent="13" name="idx_personal_message_type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="118" parent="13" name="idx_personal_parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="119" parent="13" name="idx_personal_parent_ids">
+      <columns>parent_ids</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="120" parent="13" name="idx_personal_receiver_state_change_date">
+      <columns>receiver_state_change_date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="121" parent="13" name="idx_personal_sender_state_change_date">
+      <columns>sender_state_change_date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="122" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="123" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="124" parent="14" name="message_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="125" parent="14" name="content">
+      <data-type>longtext|0</data-type>
+    </column>
+    <index id="126" parent="14" name="idx_personal_message_content_message_id">
+      <columns>message_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="127" parent="14" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="128" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="129" parent="15" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="130" parent="15" name="weight">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="131" parent="15" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="132" parent="15" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="133" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="134" parent="16" name="parent_id">
+      <data-type>bigint(20) unsigned|0</data-type>
+    </column>
+    <column id="135" parent="16" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="136" parent="16" name="type">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="137" parent="16" name="beginTime">
+      <data-type>time|0</data-type>
+    </column>
+    <column id="138" parent="16" name="endTime">
+      <data-type>time|0</data-type>
+    </column>
+    <column id="139" parent="16" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="140" parent="16" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="141" parent="17" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="142" parent="17" name="title">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="143" parent="17" name="content">
+      <data-type>longtext|0</data-type>
+    </column>
+    <key id="144" parent="17" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="145" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="146" parent="18" name="content">
+      <data-type>longtext|0</data-type>
+    </column>
+    <key id="147" parent="18" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="148" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="149" parent="19" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="150" parent="19" name="weight">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="151" parent="19" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="152" parent="19" name="idx_showcase_moveable_weight">
+      <columns>weight</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="153" parent="19" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="154" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="155" parent="20" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="156" parent="20" name="type">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="157" parent="20" name="beginDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="158" parent="20" name="endDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="159" parent="20" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="160" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="161" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="162" parent="21" name="category_id">
+      <data-type>bigint(20) unsigned|0</data-type>
+    </column>
+    <column id="163" parent="21" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="164" parent="21" name="price">
+      <data-type>bigint(20)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="165" parent="21" name="number">
+      <data-type>bigint(20)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="166" parent="21" name="beginDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="167" parent="21" name="endDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="168" parent="21" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="169" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="170" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="171" parent="22" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="172" parent="22" name="age">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="173" parent="22" name="birthday">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="174" parent="22" name="sex">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="175" parent="22" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="176" parent="22" name="deleted">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="177" parent="22" name="idx_showcase_sample_birthday">
+      <columns>birthday</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="178" parent="22" name="unique_showcase_sample_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="179" parent="22" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="180" parent="22" name="unique_showcase_sample_name">
+      <columns>name</columns>
+      <underlying-index>unique_showcase_sample_name</underlying-index>
+    </key>
+    <column id="181" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="182" parent="23" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="183" parent="23" name="status">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="184" parent="23" name="comment">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <key id="185" parent="23" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="186" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="187" parent="24" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="188" parent="24" name="status">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="189" parent="24" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="190" parent="25" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="191" parent="25" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="192" parent="25" name="parent_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="193" parent="25" name="parent_ids">
+      <data-type>varchar(200)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="194" parent="25" name="icon">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="195" parent="25" name="weight">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="196" parent="25" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="197" parent="25" name="idx_showcase_tree_parentId">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="198" parent="25" name="idx_showcase_tree_parentIds_weight">
+      <columns>parent_ids
+weight</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="199" parent="25" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="200" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="201" parent="26" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="202" parent="26" name="src">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <key id="203" parent="26" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="204" parent="27" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="205" parent="27" name="organization_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="206" parent="27" name="job_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="207" parent="27" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="208" parent="27" name="group_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="209" parent="27" name="role_ids">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="210" parent="27" name="type">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <index id="211" parent="27" name="idx_sys_auth_group">
+      <columns>group_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="212" parent="27" name="idx_sys_auth_job">
+      <columns>job_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="213" parent="27" name="idx_sys_auth_organization">
+      <columns>organization_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="214" parent="27" name="idx_sys_auth_type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="215" parent="27" name="idx_sys_auth_user">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="216" parent="27" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="217" parent="28" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="218" parent="28" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="219" parent="28" name="type">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="220" parent="28" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="221" parent="28" name="default_group">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="222" parent="28" name="idx_sys_group_default_group">
+      <columns>default_group</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="223" parent="28" name="idx_sys_group_show">
+      <columns>is_show</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="224" parent="28" name="idx_sys_group_type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="225" parent="28" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="226" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="227" parent="29" name="group_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="228" parent="29" name="organization_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="229" parent="29" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="230" parent="29" name="start_user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="231" parent="29" name="end_user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="232" parent="29" name="idx_sys_group_relation_end_user_id">
+      <columns>end_user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="233" parent="29" name="idx_sys_group_relation_group">
+      <columns>group_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="234" parent="29" name="idx_sys_group_relation_organization">
+      <columns>organization_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="235" parent="29" name="idx_sys_group_relation_start_user_id">
+      <columns>start_user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="236" parent="29" name="idx_sys_group_relation_user">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="237" parent="29" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="238" parent="30" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="239" parent="30" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="240" parent="30" name="parent_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="241" parent="30" name="parent_ids">
+      <data-type>varchar(200)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="242" parent="30" name="icon">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="243" parent="30" name="weight">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="244" parent="30" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="245" parent="30" name="idx_sys_job_nam">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="246" parent="30" name="idx_sys_job_parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="247" parent="30" name="idx_sys_job_parent_ids_weight">
+      <columns>parent_ids
+weight</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="248" parent="30" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="249" parent="31" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="250" parent="31" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="251" parent="31" name="type">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="252" parent="31" name="parent_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="253" parent="31" name="parent_ids">
+      <data-type>varchar(200)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="254" parent="31" name="icon">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="255" parent="31" name="weight">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="256" parent="31" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="257" parent="31" name="idx_sys_organization_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="258" parent="31" name="idx_sys_organization_parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="259" parent="31" name="idx_sys_organization_parent_ids_weight">
+      <columns>parent_ids
+weight</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="260" parent="31" name="idx_sys_organization_type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="261" parent="31" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="262" parent="32" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="263" parent="32" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="264" parent="32" name="permission">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="265" parent="32" name="description">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="266" parent="32" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="267" parent="32" name="idx_sys_permission_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="268" parent="32" name="idx_sys_permission_permission">
+      <columns>permission</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="269" parent="32" name="idx_sys_permission_show">
+      <columns>is_show</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="270" parent="32" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="271" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="272" parent="33" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="273" parent="33" name="identity">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="274" parent="33" name="url">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="275" parent="33" name="parent_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="276" parent="33" name="parent_ids">
+      <data-type>varchar(200)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="277" parent="33" name="icon">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="278" parent="33" name="weight">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="279" parent="33" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="280" parent="33" name="idx_sys_resource_identity">
+      <columns>identity</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="281" parent="33" name="idx_sys_resource_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="282" parent="33" name="idx_sys_resource_parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="283" parent="33" name="idx_sys_resource_parent_ids_weight">
+      <columns>parent_ids
+weight</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="284" parent="33" name="idx_sys_resource_user">
+      <columns>url</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="285" parent="33" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="286" parent="34" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="287" parent="34" name="name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="288" parent="34" name="role">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="289" parent="34" name="description">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="290" parent="34" name="is_show">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="291" parent="34" name="idx_sys_role_name">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="292" parent="34" name="idx_sys_role_role">
+      <columns>role</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="293" parent="34" name="idx_sys_role_show">
+      <columns>is_show</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="294" parent="34" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="295" parent="35" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="296" parent="35" name="role_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="297" parent="35" name="resource_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="298" parent="35" name="permission_ids">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <index id="299" parent="35" name="unique_sys_role_resource_permission">
+      <columns>role_id
+resource_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="300" parent="35" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="301" parent="35" name="unique_sys_role_resource_permission">
+      <columns>role_id
+resource_id</columns>
+      <underlying-index>unique_sys_role_resource_permission</underlying-index>
+    </key>
+    <column id="302" parent="36" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="303" parent="36" name="username">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="304" parent="36" name="email">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="305" parent="36" name="mobile_phone_number">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="306" parent="36" name="password">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="307" parent="36" name="salt">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="308" parent="36" name="create_date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="309" parent="36" name="status">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="310" parent="36" name="deleted">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="311" parent="36" name="admin">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="312" parent="36" name="idx_sys_user_status">
+      <columns>status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="313" parent="36" name="unique_sys_user_email">
+      <columns>email</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="314" parent="36" name="unique_sys_user_mobile_phone_number">
+      <columns>mobile_phone_number</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="315" parent="36" name="unique_sys_user_username">
+      <columns>username</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="316" parent="36" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="317" parent="36" name="unique_sys_user_username">
+      <columns>username</columns>
+      <underlying-index>unique_sys_user_username</underlying-index>
+    </key>
+    <key id="318" parent="36" name="unique_sys_user_email">
+      <columns>email</columns>
+      <underlying-index>unique_sys_user_email</underlying-index>
+    </key>
+    <key id="319" parent="36" name="unique_sys_user_mobile_phone_number">
+      <columns>mobile_phone_number</columns>
+      <underlying-index>unique_sys_user_mobile_phone_number</underlying-index>
+    </key>
+    <column id="320" parent="37" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="321" parent="37" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="322" parent="37" name="username">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="323" parent="37" name="uid">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="324" parent="37" name="host">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="325" parent="37" name="user_agent">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="326" parent="37" name="system_host">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="327" parent="37" name="last_login_timestamp">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="328" parent="37" name="last_stop_timestamp">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="329" parent="37" name="login_count">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="330" parent="37" name="total_online_time">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="331" parent="37" name="idx_sys_user_last_online_host">
+      <columns>host</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="332" parent="37" name="idx_sys_user_last_online_last_login_timestamp">
+      <columns>last_login_timestamp</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="333" parent="37" name="idx_sys_user_last_online_last_stop_timestamp">
+      <columns>last_stop_timestamp</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="334" parent="37" name="idx_sys_user_last_online_system_host">
+      <columns>system_host</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="335" parent="37" name="idx_sys_user_last_online_username">
+      <columns>username</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="336" parent="37" name="idx_sys_user_last_online_user_agent">
+      <columns>user_agent</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="337" parent="37" name="unique_sys_user_last_online_sys_user_id">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="338" parent="37" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="339" parent="37" name="unique_sys_user_last_online_sys_user_id">
+      <columns>user_id</columns>
+      <underlying-index>unique_sys_user_last_online_sys_user_id</underlying-index>
+    </key>
+    <column id="340" parent="38" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="341" parent="38" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="342" parent="38" name="username">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="343" parent="38" name="host">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="344" parent="38" name="system_host">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="345" parent="38" name="user_agent">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="346" parent="38" name="status">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="347" parent="38" name="start_timestsamp">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="348" parent="38" name="last_access_time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="349" parent="38" name="timeout">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="350" parent="38" name="session">
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <index id="351" parent="38" name="idx_sys_user_online_host">
+      <columns>host</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="352" parent="38" name="idx_sys_user_online_last_access_time">
+      <columns>last_access_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="353" parent="38" name="idx_sys_user_online_start_timestsamp">
+      <columns>start_timestsamp</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="354" parent="38" name="idx_sys_user_online_system_host">
+      <columns>system_host</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="355" parent="38" name="idx_sys_user_online_sys_user_id">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="356" parent="38" name="idx_sys_user_online_username">
+      <columns>username</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="357" parent="38" name="idx_sys_user_online_user_agent">
+      <columns>user_agent</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="358" parent="38" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <trigger id="359" parent="38" name="trigger_sys_user_off_online">
+      <trig-events>D</trig-events>
+      <trig-turn>AFTER_ROW</trig-turn>
+    </trigger>
+    <column id="360" parent="39" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="361" parent="39" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="362" parent="39" name="organization_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="363" parent="39" name="job_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="364" parent="39" name="unique_sys_user_organization_job">
+      <columns>user_id
+organization_id
+job_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="365" parent="39" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="366" parent="39" name="unique_sys_user_organization_job">
+      <columns>user_id
+organization_id
+job_id</columns>
+      <underlying-index>unique_sys_user_organization_job</underlying-index>
+    </key>
+    <column id="367" parent="40" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="368" parent="40" name="user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="369" parent="40" name="status">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="370" parent="40" name="reason">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="371" parent="40" name="op_user_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="372" parent="40" name="op_date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <index id="373" parent="40" name="idx_sys_user_block_history_op_user_id_op_date">
+      <columns>op_user_id
+op_date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="374" parent="40" name="idx_sys_user_block_history_user_id_block_date">
+      <columns>user_id
+op_date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="375" parent="40" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
